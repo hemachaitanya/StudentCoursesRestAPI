@@ -1,0 +1,16 @@
+---
+trigger:
+  - master
+pool:
+  name: Azure Pipelines
+  vmImage: ubuntu-latest
+steps:
+  - task: Docker@2
+    inputs:
+      command: 'build'
+      Dockerfile: '**/Dockerfile'
+      buildContext: '**'
+  - task: Docker@2
+    inputs:
+      command: 'push'
+      Dockerfile: '**/Dockerfile'
