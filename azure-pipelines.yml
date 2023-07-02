@@ -14,4 +14,4 @@ steps:
       command: 'push'
       Dockerfile: '**/Dockerfile'
       containerRegistry: 'Docker Hub'
-      repository: 'hema789 / chaitu'
+      repository: 'hema789/chaitu'
